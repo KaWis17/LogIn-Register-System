@@ -61,6 +61,18 @@ public class RegisterWindow extends window {
             password.setText("");
             repPassword.setText("");
         }
+        else if(login.getText().length() < 4){
+            JOptionPane.showMessageDialog(null, "Login is too short");
+            login.setText("");
+            password.setText("");
+            repPassword.setText("");
+        }
+        else if(String.valueOf(password.getPassword()).length() < 4){
+            JOptionPane.showMessageDialog(null, "Password is too short");
+            login.setText("");
+            password.setText("");
+            repPassword.setText("");
+        }
         else if (dataBase.containsKey(login.getText())) {
             JOptionPane.showMessageDialog(null, "Login is already taken");
             login.setText("");
